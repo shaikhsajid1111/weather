@@ -18,7 +18,7 @@ require('dotenv').config();
             isLoaded : false,
         }
      }
-     //75fdb2c2a64ac715c062a11eb71a7353
+   
      componentDidMount(){
         //https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={your api key}
          fetch(`https://something.`)
