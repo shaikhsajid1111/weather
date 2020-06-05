@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
 
 import './assets/css/index.css';
@@ -7,38 +7,46 @@ require('dotenv').config();
 
 
 
-/*parnts component*/
- class App extends React.Component{
-    
-    constructor(props){
-        super(props) ;
-        
-        this.state = {
-            items : [],
-            isLoaded : false,
-        }
-     }
-   
-     componentDidMount(){
-        //https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={your api key}
-         fetch(`https://something.`)
-        .then(res => res.json())
-        .then(json => {
-            this.setState(
-                {
-                    isLoaded : true,
-                    items : json
-                }
-            )
-        })
-        }
 
-     render(){
-         var {isLoaded,items} = this.state;
-         if(!isLoaded)          /*remove exclamation after development*/ 
-            return(
+/*parnts component*/
+
+ function App(){
+
+    const [query,setQuery] = useState('');
+    const [weather,setWeather] = useState('');
+            const search = evt =>{
+                if(evt.key == "Enter"){
+                    console.log(process.env.API_KEY)
+                    //fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)
+                    .then(res=>res.json())
+                    .then(result=>{
+                        setWeather(result);
+                        setQuery('');
+                        console.log(result);
+                    })
+                }
+            } 
+            
+            
+            
+            
+                   return(
+                
                 <div>
-                    <TemperatureContainer 
+
+
+        <div className="search-box">
+          <input 
+            type="text"
+            className="search-bar"
+            placeholder="Search..."
+            onChange={e => setQuery(e.target.value)}
+            value={query}
+            onKeyPress={search}
+          />
+        </div>
+        {console.log()}
+        <TemperatureContainer 
                     city = "Mumbai"
                     temp = '26'
                     main='Drizzle'
@@ -59,18 +67,7 @@ require('dotenv').config();
                 
                  </div>
                 
-                 )
-        return (
-            <div>
-            
-            </div>
-        ) 
-        
-         
-     }
-        
-     
-
+            )
 
  }
 
