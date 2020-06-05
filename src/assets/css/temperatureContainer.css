@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cabin&family=Catamaran:wght@700&family=Fredoka+One&family=Montserrat:wght@900&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.text-center{
+    text-align: center;
+}
+#temperature{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+.cabin-font{
+    font-family: 'Cabin', sans-serif;
+}
+.catamaran{
+    font-family: 'Catamaran', sans-serif;
+}
+.rubik{
+    font-family: 'Rubik', sans-serif;
+}
+.fredoka{
+    font-family: 'Fredoka One', cursive;
+}
+/*
+font-family: 'Rubik', sans-serif;
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Cabin', sans-serif;
+font-family: 'Catamaran', sans-serif;
+font-family: 'Fredoka One', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+.box{
+    border: 1px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 1.5s;
+    margin: 10px;
+    padding: 2em;
+    text-align: center;
+}
+.box:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+.today-box{
+    background-color: white;
+}
+*/
