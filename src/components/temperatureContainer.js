@@ -1,5 +1,4 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
 import '../assets/css/temperatureContainer.css';
 
 
@@ -15,14 +14,15 @@ const TemperatureContainer= (props) =>{
         <div className="container">
 
             
-            <h1 id="temperature">{props.temp}<sup>°C</sup></h1>
-            
+            <h1 id="temperature">{props.temp}<sup>°<small>C</small></sup></h1>
+                
         </div>
+       
         <div>
         <h2 className="text-center catamaran">{props.main}</h2>
         </div>
         <div>
-    <h2 className="text-center catamaran">{props.temp_min}<sup>°C</sup>/{props.temp_max}<sup>°C</sup></h2>
+    <h2 className="text-center catamaran">{props.temp_min}<sup>°<small>C</small></sup>/{props.temp_max}<sup>°<small>C</small></sup></h2>
         </div>      
     </div>
     )}

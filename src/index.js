@@ -1,14 +1,16 @@
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
-
 import './assets/css/index.css';
 import TemperatureContainer from './components/temperatureContainer';
+import MoreDetails from './components/moreDetails';
+
 require('dotenv').config();
 
 
 
 
-/*parnts component*/
+
+/*parent component*/
 
  function App(){
 
@@ -16,8 +18,8 @@ require('dotenv').config();
     const [weather,setWeather] = useState('');
             const search = evt =>{
                 if(evt.key == "Enter"){
-                    console.log(process.env.API_KEY)
-                    //fetch(`http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)
+                    
+                    fetch(`://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)
                     .then(res=>res.json())
                     .then(result=>{
                         setWeather(result);
@@ -39,32 +41,36 @@ require('dotenv').config();
           <input 
             type="text"
             className="search-bar"
-            placeholder="Search..."
+            placeholder="Search City"
             onChange={e => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
           />
         </div>
-        {console.log()}
+        
         <TemperatureContainer 
                     city = "Mumbai"
                     temp = '26'
                     main='Drizzle'
                     description = "light intensity drizzle"
-                    pressure = "1012"
-                    humidity = "81"
                     temp_min = '289'
                     temp_max = '355'
-                    visibility = '10000'
-                    wind_speed = '125'
-                    wind_deg = '45'
                     country = "India"
-                    rain = "Heavy"
-                    snow = "Heavy"
-                    cloud = "Ssss"
                     date = '1485792967'
+                    feelslike = "30"
                     />
+        <MoreDetails
+                pressure = "1012"
+                humidity = "81"
+                visibility = '10000'
+                wind_speed = '125'
+                wind_deg = '45'
+                rain = "Heavy"
+                snow = "Heavy"
+                cloud = "Ssss"
+                        
                 
+                />
                  </div>
                 
             )
