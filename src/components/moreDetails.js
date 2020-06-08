@@ -14,20 +14,20 @@ const MoreDetails = props =>{
                 cloud = "Ssss"*/ 
         <div>
             <div className="flexbox-container">
-                <div className="box">
-                    <h6 >Pressure</h6>
-                    <h3>{props.pressure}</h3>
+                <div className="box ">
+                    <h6 className="rubik">Pressure</h6>
+                    <h3 className="catamaran">{props.pressure}</h3>
                 </div>
                 <div className="box">
-                <h6 >Humidity</h6>
-                    <h3>{props.humidity}</h3>
+                <h6 className="rubik">Humidity</h6>
+                    <h3 className="catamaran">{props.humidity}</h3>
                 </div>
                 <div className="box">
-                <h6 >Visibility</h6>
-                    <h3>{props.visibility}</h3>
+                <h6 className="rubik">Visibility</h6>
+                    <h3 className="catamaran">{props.visibility}</h3>
                 </div>
                 <div className="box">
-                <h6 >Wind Speed</h6>
+                <h6 className="rubik">Wind Speed</h6>
                     <h3>{props.wind_speed}</h3>
                 </div>
 

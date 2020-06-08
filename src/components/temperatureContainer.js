@@ -5,20 +5,26 @@ import '../assets/css/temperatureContainer.css';
 
 
 const TemperatureContainer= (props) =>{
-    var date = new Date(Number(props.date));
-    var fullDate = date.toDateString();
+    const months = ["Jan","Feb","Mar","April","Maty","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const weekdays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+    const icon = `http://openweathermap.org/img/w/${props.icons}.png`
     return(
     <div>
         <h1 className="text-center catamaran">{props.city},{props.country}</h1>
-    <h3 className='rubik text-center'>{fullDate}</h3>
+    <h3 className='rubik text-center'> {months[props.date.getMonth()]} {props.date.getDate()},{props.date.getFullYear()}, { weekdays[props.date.getDay()] }</h3>
+    <div className="image-container">
+        
+        </div>
         <div className="container">
 
             
-            <h1 id="temperature">{props.temp}<sup>°<small>C</small></sup></h1>
+            <h1 id="temperature">{props.temp}<sup>°<small>C</small><img className="icon" src={icon}/></sup></h1>
+    
                 
         </div>
-       
+          
         <div>
+            
         <h2 className="text-center catamaran">{props.main}</h2>
         </div>
         <div>

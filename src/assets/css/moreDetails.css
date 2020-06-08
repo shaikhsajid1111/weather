@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cabin&family=Catamaran:wght@700&family=Fredoka+One&family=Montserrat:wght@900&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 .flexbox-container{
     display: flex;
     flex-wrap: wrap;
@@ -11,4 +13,16 @@
 }
 .text-center{
     text-align: center;
+}
+.cabin-font{
+    font-family: 'Cabin', sans-serif;
+}
+.catamaran{
+    font-family: 'Catamaran', sans-serif;
+}
+.rubik{
+    font-family: 'Rubik', sans-serif;
+}
+.fredoka{
+    font-family: 'Fredoka One', cursive;
 }
