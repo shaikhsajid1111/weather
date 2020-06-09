@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cabin&family=Catamaran:wght@700&family=Fredoka+One&family=Montserrat:wght@900&family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 body{
     
     margin: 0;
     padding: 0;
-    background-image: url('../images/T_4.svg');
+    
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,11 +15,12 @@ body{
 .search-bar {
     height: 5vh;
     outline: none;
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px 10px 10px 10px;
     text-align: center;
     padding: 0 15% 0 15%;
     border: 1px solid white;
     z-index: 0;
+    font-family: 'Cabin', sans-serif;  
 }
 #particles {
     position: absolute;
@@ -28,4 +31,25 @@ body{
     z-index: -555;
 }
   
- 
+ .units{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+ }
+ .catamaran{
+    font-family: 'Catamaran', sans-serif;     
+ }
+ .cabin{
+    font-family: 'Cabin', sans-serif;     
+ }
+ /*
+font-family: 'Rubik', sans-serif;
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Cabin', sans-serif;
+font-family: 'Catamaran', sans-serif;
+font-family: 'Fredoka One', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+
+*/
