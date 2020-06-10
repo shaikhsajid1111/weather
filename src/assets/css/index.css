@@ -12,6 +12,7 @@ body{
     align-items: center;  
     min-height: 100vh;
     text-align: center;
+    
 }
 .flex-container{
     display: flex;
@@ -68,6 +69,7 @@ body{
     }
  .column{
      flex: 50%;
+     
  }
  .moreDetail{
      margin-top: 50%;

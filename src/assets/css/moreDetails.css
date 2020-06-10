@@ -1,15 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Cabin&family=Catamaran:wght@700&family=Fredoka+One&family=Montserrat:wght@900&family=Raleway:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
-.flexbox-container{
+.flex-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    opacity: .7;
+    max-height: 25vh;
+    margin-top: 2%;
+    padding: 5%;
+    margin: 15px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    transition: 0.87s linear;
 }
 .box{
-    margin: 5px;
     color: white;
+    flex-grow: 1.5;
+    color: black;
+    
    
+}
+#barometer{
+    transform: scale(2);
 }
 .text-center{
     text-align: center;

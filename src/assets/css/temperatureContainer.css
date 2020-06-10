@@ -49,9 +49,8 @@ td{
     padding: 4%;
 }
 .card{
-    margin-top: 5%;
-    padding: 10%;
-    border: 1px solid black;
+    margin-top: 2%;
+    padding: 10%; 
     border-radius: 100px;
     background-color: white;
     opacity: .7;
@@ -59,6 +58,7 @@ td{
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     transition: 0.87s linear;
+    
 }
 .card:hover{
     -webkit-box-shadow: 6px -3px 43px 0px rgba(0,0,0,0.73);

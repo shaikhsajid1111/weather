@@ -483,7 +483,7 @@ function App() {
           pressure={weather.main.pressure}
           humidity={weather.main.humidity}
           visibility={weather.visibility}
-          wind_speed={(degreeType == "celsius") ? weather.wind.speed : Math.ceil(weather.wind.speed*0.00062137)}
+          wind_speed={(degreeType == "celsius") ? weather.wind.speed : weather.wind.speed*0.00062137.toFixed(3)}
           wind_deg={weather.main.deg}
           cloudiness = {weather.clouds.all}
 
