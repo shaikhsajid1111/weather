@@ -4,11 +4,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+    align-items: center;
 }
 .box{
     margin: 5px;
-    
+    color: white;
    
 }
 .text-center{

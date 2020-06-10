@@ -15,6 +15,7 @@ require('dotenv').config();
 C->F = (celsius*1.8)+32
 F->C = (f-32)/1.8
 */
+
 /**http://openweathermap.org/img/w/10d.png */
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
   const [weather, setWeather] = useState({});
   const [degreeType, setDegreeType] = useState('');
 
-
+  console.log(weather)
   const updateForecastDegree = (evt) => {
     setDegreeType(evt.target.value);
   }
@@ -56,6 +57,7 @@ function App() {
 
 
   }
+  
   //{console.log(weather.main)}
   if (weather.main == undefined || weather.cod === '404') {
     return (
@@ -204,9 +206,13 @@ function App() {
 
   if (weather.main != undefined) {
     return (
-
-      <div className={(weather.main.temp > 16) ? 'warm' : 'normal'}>
-        <Particles id="particles" params={
+      
+      
+      <div >
+        
+        
+        
+        {   (weather.main.temp < 16) ? (<Particles id="particles" params={
 
           {
             "particles": {
@@ -319,8 +325,124 @@ function App() {
             "retina_detect": true
           }
 
-
-        } />
+} />): (
+         <Particles id="particles" params={
+           
+          {
+            "particles": {
+              "number": {
+                "value": 1,
+                "density": {
+                  "enable": true,
+                  "value_area": 800
+                }
+              },
+              "color": {
+                "value": "#ededed"
+              },
+              "shape": {
+                "type": "circle",
+                "stroke": {
+                  "width": 0,
+                  "color": "#000"
+                },
+                "polygon": {
+                  "nb_sides": 6
+                },
+                "image": {
+                  "src": "img/github.svg",
+                  "width": 100,
+                  "height": 100
+                }
+              },
+              "opacity": {
+                "value": 0.04008530152163807,
+                "random": true,
+                "anim": {
+                  "enable": false,
+                  "speed": 1,
+                  "opacity_min": 0.1,
+                  "sync": false
+                }
+              },
+              "size": {
+                "value": 80.17060304327615,
+                "random": false,
+                "anim": {
+                  "enable": true,
+                  "speed": 10,
+                  "size_min": 40,
+                  "sync": false
+                }
+              },
+              "line_linked": {
+                "enable": false,
+                "distance": 200,
+                "color": "#ffffff",
+                "opacity": 0.7,
+                "width": 2
+              },
+              "move": {
+                "enable": true,
+                "speed": 8,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                  "enable": false,
+                  "rotateX": 600,
+                  "rotateY": 1200
+                }
+              }
+            },
+            "interactivity": {
+              "detect_on": "canvas",
+              "events": {
+                "onhover": {
+                  "enable": true,
+                  "mode": "repulse"
+                },
+                "onclick": {
+                  "enable": true,
+                  "mode": "push"
+                },
+                "resize": true
+              },
+              "modes": {
+                "grab": {
+                  "distance": 400,
+                  "line_linked": {
+                    "opacity": 1
+                  }
+                },
+                "bubble": {
+                  "distance": 400,
+                  "size": 40,
+                  "duration": 2,
+                  "opacity": 0.8,
+                  "speed": 3
+                },
+                "repulse": {
+                  "distance": 200,
+                  "duration": 0.4
+                },
+                "push": {
+                  "particles_nb": 4
+                },
+                "remove": {
+                  "particles_nb": 2
+                }
+              }
+            },
+            "retina_detect": true
+          }  
+         
+        
+        
+        }/>
+        )}
         <div className="search-box">
           <input
             type="text"
@@ -338,35 +460,35 @@ function App() {
         </div>
         </div>
 
-
+        <div className="row">
         <TemperatureContainer
+        className="column"
           city={weather.name}
           degreeType={degreeType}
           temp={(degreeType == "celsius") ? Math.round(weather.main.temp) : Math.round((weather.main.temp * 1.8) + 32)}
           main={weather.weather[0].description}
           description={weather[0]}
-          temp_min={weather.main.temp_min}
-          temp_max={weather.main.temp_max}
+          temp_min= {(degreeType == "celsius") ? Math.round(weather.main.temp_min) : Math.round((weather.main.temp_min * 1.8) + 32) }
+          temp_max={(degreeType == "celsius") ? Math.round(weather.main.temp_max) : Math.round((weather.main.temp_max * 1.8) + 32) }
           country={weather.sys.country}
           date={new Date()}
 
-          feelslike={weather.main.feels_like}
-          icons={weather.weather[0].icon}
+          feelslike={(degreeType == "celsius") ? Math.round(weather.main.feels_like) : Math.round((weather.main.feels_like * 1.8) + 32)}
+          icons={weather.weather[0].id}
         />
 
         <MoreDetails
+        className="column moreDetail"
+          degreeType = {degreeType}
           pressure={weather.main.pressure}
           humidity={weather.main.humidity}
           visibility={weather.visibility}
-          wind_speed={weather.wind.speed}
+          wind_speed={(degreeType == "celsius") ? weather.wind.speed : Math.ceil(weather.wind.speed*0.00062137)}
           wind_deg={weather.main.deg}
-          rain="Heavy"
-          snow="Heavy"
-          cloud="Ssss"
-
+          cloudiness = {weather.clouds.all}
 
         />
-
+</div>
       </div>
 
     )

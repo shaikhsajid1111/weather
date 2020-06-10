@@ -11,27 +11,36 @@ const MoreDetails = props => {
                 wind_deg = '45'
                 rain = "Heavy"
                 snow = "Heavy"
-                cloud = "Ssss"*/
+                cloud = "Ssss"
+                
+                */
         <div>
             <div className="flexbox-container">
-                <div className="box ">
+                
+
+            
+            
+
+
+            <div className="box ">
                     <h6 className="rubik">Pressure</h6>
-                    <h3 className="catamaran">{props.pressure}</h3>
+                    <h3 className="catamaran">{props.pressure}Pa</h3>
                 </div>
                 <div className="box">
                     <h6 className="rubik">Humidity</h6>
-                    <h3 className="catamaran">{props.humidity}</h3>
+                    <h3 className="catamaran">{props.humidity}%</h3>
                 </div>
                 <div className="box">
                     <h6 className="rubik">Visibility</h6>
-                    <h3 className="catamaran">{props.visibility}</h3>
+                    <h3 className="catamaran">{props.visibility}m</h3>
                 </div>
                 <div className="box">
                     <h6 className="rubik">Wind Speed</h6>
-                    <h3>{props.wind_speed}</h3>
+                    <h3 className="catamaran">{props.wind_speed}{(props.degreeType == "celsius") ?  'm/s' : 'mi/h'}</h3>
                 </div>
 
             </div>
+
         </div>
     )
 }

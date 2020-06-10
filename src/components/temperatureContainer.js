@@ -31,9 +31,7 @@ const TemperatureContainer = (props) => {
         'Saturday'
     ]
     var temperature = props.temp;
-    const icon = `http://openweathermap.org/img/w/${
-        props.icons
-        }.png`
+    const icon = `owf owf-${props.icons} owf-5x`
 
 
 
@@ -42,7 +40,7 @@ const TemperatureContainer = (props) => {
     return (
 
 
-        <div>
+        <div className="card">
             <h1 className="text-center catamaran">
                 {
                     props.city
@@ -53,6 +51,8 @@ const TemperatureContainer = (props) => {
                 {
                     months[props.date.getMonth()]
                 }
+                <span> </span>
+
                 {
                     props.date.getDate()
                 } ,{
@@ -60,24 +60,29 @@ const TemperatureContainer = (props) => {
                 }, {
                     weekdays[props.date.getDay()]
                 }</h3>
-
-            <div className="container">
+                <div className="image-container">
+            <i className={icon}></i>
+            </div>
+                       <div className="container">
 
 
                 <h1 id="temperature">
-                    {
+             {
                         temperature
                     }
                     <sup><small> {(props.degreeType == "celsius") ? '°C' : '°F'}      </small>
 
 
-                        <img className="icon"
-                            src={icon} alt="Weather icon" /></sup>
+                       </sup>
                 </h1>
+
+                <br />
+
+
 
 
             </div>
-
+            <h3 className="catamaran text-center">Feels like <sup>{props.feelslike}{(props.degreeType == "celsius") ? '°C' : '°F'}</sup></h3>
             <div>
 
                 <h2 className="text-center catamaran">

@@ -8,11 +8,28 @@ body{
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
-    justify-content: center;  
+    justify-content: center;
+    align-items: center;  
     min-height: 100vh;
+    text-align: center;
+}
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+}
+.search-box{
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    transition: 0.8s linear;
+    margin-top: 5%;
+    text-align: center;
 }
 .search-bar {
+    
     height: 5vh;
     outline: none;
     border-radius: 10px 10px 10px 10px;
@@ -21,6 +38,7 @@ body{
     border: 1px solid white;
     z-index: 0;
     font-family: 'Cabin', sans-serif;  
+    transition: 4s all;
 }
 #particles {
     position: absolute;
@@ -42,6 +60,17 @@ body{
  }
  .cabin{
     font-family: 'Cabin', sans-serif;     
+ }
+ .row{
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+ .column{
+     flex: 50%;
+ }
+ .moreDetail{
+     margin-top: 50%;
  }
  /*
 font-family: 'Rubik', sans-serif;

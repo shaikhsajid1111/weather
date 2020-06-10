@@ -9,9 +9,12 @@
     "@testing-library/user-event": "^7.1.2",
     "dotenv": "^8.2.0",
     "react": "^16.13.1",
+    "react-bootstrap-card": "^0.2.1",
     "react-dom": "^16.13.1",
     "react-load-script": "0.0.6",
-    "react-particles-js": "^3.2.1"
+    "react-particles-js": "^3.2.1",
+    "reactstrap": "^8.4.1",
+    "uninstall": "0.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
