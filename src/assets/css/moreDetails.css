@@ -8,24 +8,33 @@
     background-color: white;
     border-radius: 50px;
     opacity: .7;
-    max-height: 25vh;
+    
+    min-height: 10vh;
+    max-height: 50vh;
+    overflow: hidden;
     margin-top: 2%;
-    padding: 5%;
+    
     margin: 15px;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     transition: 0.87s linear;
+    padding: 4%;
+}
+.flex-container:hover{
+    -webkit-box-shadow: 6px -3px 43px 0px rgba(0,0,0,0.73);
+    -moz-box-shadow: 6px -3px 43px 0px rgba(0,0,0,0.73);
+    box-shadow: 6px -3px 43px 0px rgba(0,0,0,0.73);
 }
 .box{
     color: white;
     flex-grow: 1.5;
     color: black;
-    
+  
    
 }
-#barometer{
-    transform: scale(2);
+.detail-icons{
+    transform: scale(3);
 }
 .text-center{
     text-align: center;

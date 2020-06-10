@@ -2,6 +2,8 @@ import React from 'react';
 import '../assets/css/moreDetails.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import {WiBarometer,WiHumidity} from 'react-icons/wi';
+import {GiPaperWindmill,GiWindsock} from 'react-icons/gi';
+import {MdVisibility} from 'react-icons/md';
 const MoreDetails = props => {
     return (
         /*
@@ -19,7 +21,7 @@ const MoreDetails = props => {
 
 
                 <div className="box">
-                <WiBarometer id="barometer"/>
+                <WiBarometer className="detail-icons"/>
                     <h3 className="catamaran">
                         {
                             props.pressure
@@ -28,7 +30,7 @@ const MoreDetails = props => {
                 <br/><span>&nbsp;&nbsp;</span>
                  
                 <div className="box">
-                <WiHumidity/>
+                <WiHumidity className="detail-icons"/>
                     <h3 className="catamaran">
                         {
                             props.humidity
@@ -37,7 +39,7 @@ const MoreDetails = props => {
                 <br/><span>&nbsp;&nbsp;</span>
 
                 <div className="box">
-                    <i className="fas fa-eye"></i>
+                    <MdVisibility className="detail-icons"/>
                     <h3 className="catamaran">
                         {
                             props.visibility
@@ -45,7 +47,7 @@ const MoreDetails = props => {
                 </div> 
                 <br/><span>&nbsp;&nbsp;</span>
                 <div className="box"> {/*<h6 className="rubik">Wind Speed</h6>*/}
-                    <i className="fas fa-wind"></i>
+                    <GiPaperWindmill className="detail-icons"/>
                     <h3 className="catamaran">
                         {
                             props.wind_speed
@@ -54,7 +56,14 @@ const MoreDetails = props => {
                             (props.degreeType == "celsius") ? 'm/s' : 'mi/h'
                         }</h3><span>&nbsp;&nbsp;</span>
                 </div> <br/><span>&nbsp;&nbsp;</span>
-
+                <div className="box">
+                    <GiWindsock className="detail-icons"/>
+                    <h3 className="catamaran">
+                        {
+                            props.wind_deg
+                        }&#176;</h3><span>&nbsp;&nbsp;</span>
+                </div> 
+                <br/><span>&nbsp;&nbsp;</span>
             </div>
 
   

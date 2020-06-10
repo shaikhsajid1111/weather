@@ -4,14 +4,15 @@ body{
     
     margin: 0;
     padding: 0;
-    
     display: flex;
-    background-repeat: no-repeat;
+   
+    background-position: center;
     background-size: cover;
     justify-content: center;
     align-items: center;  
     min-height: 100vh;
     text-align: center;
+    
     
 }
 .flex-container{
