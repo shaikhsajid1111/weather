@@ -1,9 +1,9 @@
 import React from 'react';
 import '../assets/css/moreDetails.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 import {WiBarometer,WiHumidity} from 'react-icons/wi';
-import {GiPaperWindmill,GiWindsock} from 'react-icons/gi';
+import {GiPaperWindmill,GiWindsock,GiSunset,GiSunrise} from 'react-icons/gi';
 import {MdVisibility} from 'react-icons/md';
+import {IoIosCloud} from 'react-icons/io';
 const MoreDetails = props => {
     return (
         /*
@@ -64,8 +64,37 @@ const MoreDetails = props => {
                         }&#176;</h3><span>&nbsp;&nbsp;</span>
                 </div> 
                 <br/><span>&nbsp;&nbsp;</span>
-            </div>
 
+
+                <div className="box">
+                    <IoIosCloud className="detail-icons"/>
+                    <h3 className="catamaran">
+                        {
+                            props.cloudiness
+                        }%</h3><span>&nbsp;&nbsp;</span>
+                </div> 
+                <br/><span>&nbsp;&nbsp;</span>
+
+                <div className="box">
+                    <GiSunset className="detail-icons"/>
+                    <h3 className="catamaran">
+                        {
+                            props.sunset.getHours() +":"+props.sunset.getMinutes() +":" +  props.sunset.getSeconds()
+                        }</h3><span>&nbsp;&nbsp;</span>
+                </div> 
+                <br/><span>&nbsp;&nbsp;</span>
+                <div className="box">
+         <GiSunrise className="detail-icons"/>
+              <h3 className="catamaran">
+                  {
+                      props.sunrise.getHours() +":"+props.sunset.getMinutes() +":" +  props.sunset.getSeconds()
+                  }</h3>
+          </div> 
+        
+            </div>
+        
+            
+          
   
     )
 }

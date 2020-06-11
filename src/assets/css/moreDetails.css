@@ -20,6 +20,7 @@
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     transition: 0.87s linear;
     padding: 4%;
+    max-width: 20vw;
 }
 .flex-container:hover{
     -webkit-box-shadow: 6px -3px 43px 0px rgba(0,0,0,0.73);
@@ -50,4 +51,9 @@
 }
 .fredoka{
     font-family: 'Fredoka One', cursive;
+}
+@media only screen and (max-width: 768px){
+    .flex-container{
+        max-width: 75vw;
+    }
 }

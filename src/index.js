@@ -471,7 +471,7 @@ function App() {
           temp_min= {(degreeType == "celsius") ? Math.round(weather.main.temp_min) : Math.round((weather.main.temp_min * 1.8) + 32) }
           temp_max={(degreeType == "celsius") ? Math.round(weather.main.temp_max) : Math.round((weather.main.temp_max * 1.8) + 32) }
           country={weather.sys.country}
-          date={new Date()}
+          date={new Date(weather.dt * 1000)}
 
           feelslike={(degreeType == "celsius") ? Math.round(weather.main.feels_like) : Math.round((weather.main.feels_like * 1.8) + 32)}
           icons={weather.weather[0].id}
@@ -486,6 +486,8 @@ function App() {
           wind_speed={(degreeType == "celsius") ? weather.wind.speed : parseFloat(weather.wind.speed*0.00062137).toFixed(3)}
           wind_deg={weather.wind.deg}
           cloudiness = {weather.clouds.all}
+          sunset = {new Date(weather.sys.sunset * 1000)}
+          sunrise = {new Date(weather.sys.sunrise * 1000)}
 
         />
 </div>
