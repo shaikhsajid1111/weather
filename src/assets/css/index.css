@@ -21,6 +21,26 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+footer{
+    margin-bottom: 10px;
+}
+.copyright-container{
+    display: flex;
+    justify-content: center;
+}
+.footer-copyright{
+   
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    
+    
+}
+
+.text-white{
+    color: white;
+}
+
 .search-box{
     align-self: center;
     justify-self: center;
