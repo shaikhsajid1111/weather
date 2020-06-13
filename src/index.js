@@ -4,6 +4,7 @@ import './assets/css/index.css';
 import TemperatureContainer from './components/temperatureContainer';
 import MoreDetails from './components/moreDetails';
 import Particles from 'react-particles-js';
+import Footer from './components/footer';
 require('dotenv').config();
 
 
@@ -176,9 +177,9 @@ function App() {
             },
             "retina_detect": true
           }
+         
 
-
-        } />
+        }/>
         <div className="search-box ">
 
           <input
@@ -200,7 +201,7 @@ function App() {
 
         </div>
 
-         
+         <Footer />
       
          
       </div>
@@ -328,7 +329,7 @@ function App() {
             },
             "retina_detect": true
           }
-
+          
 } />): (
          <Particles id="particles" params={
            
@@ -446,6 +447,7 @@ function App() {
         
         
         }/>
+        
         )}
         <div className="search-box">
           <input
@@ -462,7 +464,9 @@ function App() {
             <input type="radio" name="degree" value="farenheit" onChange={updateForecastDegree} />Farenheit<br />
             <input type="radio" name="degree" value="celsius" onChange={updateForecastDegree} /> Celsius
         </div>
+       
         </div>
+        
 
         <div className="row">
         <TemperatureContainer

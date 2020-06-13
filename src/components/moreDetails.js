@@ -90,6 +90,7 @@ const MoreDetails = props => {
                       props.sunrise.getHours() +":"+props.sunset.getMinutes() +":" +  props.sunset.getSeconds()
                   }</h3>
           </div> 
+          
         
             </div>
         
