@@ -6,7 +6,7 @@ const Footer = () =>{
     return(
     <div className="footer-container">
         <p><BsDot/> Powered by <b>Openweathermap</b></p>
-        <p>Made with <AiFillHeart/> by <b>Sajid</b></p>
+        <p>Made with <AiFillHeart className="heart" /> by <b>Sajid</b></p>
         </div>)
 }
 

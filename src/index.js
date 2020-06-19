@@ -473,7 +473,7 @@ function App() {
         className="column"
           city={weather.name}
           degreeType={degreeType}
-          temp={(degreeType == "celsius") ? Math.round(weather.main.temp) : Math.round((weather.main.temp * 1.8) + 32)}
+          temp={(degreeType == "celsius") ? parseFloat(weather.main.temp).toFixed(1) : parseFloat((weather.main.temp * 1.8) + 32).toFixed(1)}
           main={weather.weather[0].description}
           description={weather[0]}
           temp_min= {(degreeType == "celsius") ? Math.round(weather.main.temp_min) : Math.round((weather.main.temp_min * 1.8) + 32) }
@@ -506,10 +506,5 @@ function App() {
   }
 }
 
-/*
-{lat, lon, alt_m, alt_ft, wx_desc, wx_code, wx_icon, temp_c, temp_f, feelslike_c, feelslike_f, humid_pct, windspd_mph,
-    windspd_kmh, windspd_kts, windspd_ms,
-    winddir_deg, winddir_compass, 
-    cloudtotal_pct, vis_km, vis_mi, vis_desc, slp_mb, slp_in, dewpoint_c, dewpoint_f})
-*/
+
 ReactDOM.render(<App />, document.getElementById('root'));
