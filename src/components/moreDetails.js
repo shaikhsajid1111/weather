@@ -6,17 +6,7 @@ import {MdVisibility} from 'react-icons/md';
 import {IoIosCloud} from 'react-icons/io';
 const MoreDetails = props => {
     return (
-        /*
-                pressure = "1012"
-                humidity = "81"
-                visibility = '10000'
-                wind_speed = '125'
-                wind_deg = '45'
-                rain = "Heavy"
-                snow = "Heavy"
-                cloud = "Ssss"
-                
-                */ <div className="flex-container">
+      <div className="flex-container">
             
 
 
